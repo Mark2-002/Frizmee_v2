@@ -85,63 +85,12 @@ The project includes Bluetooth initialization and advertising through the custom
 
 NFC functionality is implemented in the main firmware using the NDEF URI message flow with a tag URL (`mlworkx.com`). The code sets up NFC T2T emulation and starts the tag when enabled.
 
-## Build Instructions
 
-This project uses the Zephyr RTOS and the Nordic nRF Connect SDK toolchain.
 
-### Prerequisites
 
-- nRF Connect SDK / Zephyr environment
-- `west` tool
-- CMake, Ninja, and a suitable GNU ARM toolchain
-- nRF development board or compatible target
 
-### Example build
 
-```bash
-west build -p always -b nrf54l15dk/nrf54l15/cpuapp .
-```
 
-### Flash to board
 
-```bash
-west flash
-```
 
-If you are using a custom build setup, ensure the Zephyr base and toolchain environment variables are configured correctly before compiling.
-
-## Configuration Notes
-
-- `prj.conf` contains the default Zephyr app configuration.
-- `prj-coex.conf` appears to be a coexistence-specific configuration.
-- `sysbuild.conf` is included for multi-image / system build settings.
-- `sample.yaml` includes sample metadata and test definitions for Zephyr-based validation.
-
-## Important Notes
-
-- The firmware is designed around Nordic hardware and Zephyr drivers.
-- The code is written in C and uses direct device register access for the BNO055 and Nordic peripherals.
-- This repository appears to be an experimental/prototype wearable device project, with features intended for BLE monitoring, control, and firmware update.
-
-## License
-
-No explicit license file was found in the repository. If this project is intended for public reuse, adding an open-source license is recommended.
-
-## Suggested Next Improvements
-
-- add a project-specific architecture diagram
-- document the BLE GATT service structure
-- document NFC payload format and expected application behavior
-- add a clear build and flashing guide for the exact hardware revision
-- add a license file and contribution instructions
-
-## Contact / Project Context
-
-This project appears to be a personal/prototype embedded system for motion tracking and BLE interaction. The repository description indicates a focus on:
-
-- motion tracking with BNO055
-- NFC interaction
-- wireless charging
-- BLE-control of LEDs and sensor values
-- firmware updates over BLE (SMP server)
 
