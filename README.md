@@ -1,4 +1,4 @@
-# Frizmee_v1
+# Frizmee_v2
 
 A Zephyr-based Nordic nRF54L15 firmware project for a motion-tracking wearable device built around the Bosch BNO055 inertial sensor. The device monitors acceleration, gyroscope, magnetometer, quaternion data, and orientation, then transmits the values over BLE while also supporting wireless charging, NFC, LED control, and BLE-based firmware update capability.
 
@@ -32,33 +32,6 @@ This repository is organized as a Zephyr application, with the main firmware liv
 - System-off and low-power behavior
 - watchdog support and reset handling
 - SMP server/FOTA readiness for BLE firmware updates
-
-## Hardware Target
-
-This project targets Nordic nRF-based hardware, especially the nRF54L15 platform. The repository contains:
-
-- `nrf54l15dk_nrf54l15_cpuapp.overlay` for board-specific configuration
-- `boards/` directory for hardware-related definitions
-- Zephyr configuration files (`prj.conf`, `prj-coex.conf`, `sysbuild.conf`)
-
-## Repository Structure
-
-```text
-Frizmee_v1/
-├── CMakeLists.txt
-├── Kconfig
-├── boards/
-├── nrf54l15dk_nrf54l15_cpuapp.overlay
-├── prj.conf
-├── prj-coex.conf
-├── sample.yaml
-├── sysbuild.conf
-└── src/
-    ├── ble.h
-    ├── main.c
-    ├── sys_off.h
-    └── ws2812.h
-```
 
 ## Core Firmware Behavior
 
