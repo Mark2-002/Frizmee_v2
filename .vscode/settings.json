@@ -1,5 +1,0 @@
-{
-    "nrf-connect.debugging.bindings": {
-        "${workspaceFolder}/build/freezmee_code": "Launch freezmee_code/build/freezmee_code"
-    }
-}
